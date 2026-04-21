@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#b9c8de",
+                        "secondary-container": "#39485a",
+                        "on-primary-fixed": "#00201d",
+                        "on-tertiary-fixed": "#360f00",
+                        "surface-tint": "#3edccc",
+                        "tertiary-fixed": "#ffdbcd",
+                        "surface-container-highest": "#2d3449",
+                        "secondary-fixed": "#d4e4fa",
+                        "surface-dim": "#0b1326",
+                        "outline": "#859491",
+                        "surface-container-lowest": "#060e20",
+                        "on-primary-fixed-variant": "#005049",
+                        "inverse-primary": "#006a61",
+                        "on-error": "#690005",
+                        "tertiary-container": "#ff9261",
+                        "on-secondary": "#233143",
+                        "tertiary": "#ffbb9e",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#bacac6",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#dae2fd",
+                        "primary": "#43e0cf",
+                        "on-secondary-fixed": "#0d1c2d",
+                        "on-background": "#dae2fd",
+                        "surface-container-low": "#131b2e",
+                        "on-secondary-container": "#a7b6cc",
+                        "outline-variant": "#3c4a47",
+                        "background": "#0b1326",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-tertiary-container": "#752a00",
+                        "on-surface": "#dae2fd",
+                        "primary-fixed": "#63f9e8",
+                        "on-secondary-fixed-variant": "#39485a",
+                        "surface-container-high": "#222a3d",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#7c2e03",
+                        "on-tertiary": "#581e00",
+                        "surface": "#0b1326",
+                        "primary-fixed-dim": "#3edccc",
+                        "secondary": "#b9c8de",
+                        "primary-container": "#00c4b4",
+                        "surface-variant": "#2d3449",
+                        "on-primary": "#003732",
+                        "on-primary-container": "#004b44",
+                        "surface-container": "#171f33",
+                        "surface-bright": "#31394d",
+                        "inverse-on-surface": "#283044"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+<body class="text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#0b1326]/60 backdrop-blur-xl no-border shadow-xl shadow-teal-500/5">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-xl font-black tracking-[-0.02em] text-[#43e0cf]">FLUTTER DEV</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex gap-8 items-center relative" id="desktop-nav">
+<div id="nav-underline" class="absolute bottom-[-4px] h-[2px] bg-[#43e0cf] transition-all duration-300 ease-out opacity-0"></div>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-colors" href="#hero">I'M</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-colors" href="#about">About</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-colors" href="#skills">Skills</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-colors" href="#experience">Experience</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-colors" href="#projects">Projects</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-colors" href="#contact">Contact</a>
+</div>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-surface" id="hero">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-[-10%] right-[-10%] w-96 h-96 bg-primary rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-96 h-96 bg-secondary-container rounded-full blur-[120px]"></div>
+</div>
+<div class="max-w-6xl mx-auto px-6 text-center relative z-10 w-full">
+<div class="space-y-6 max-w-5xl mx-auto">
+<div class="text-primary font-bold tracking-[0.3em] uppercase text-xl md:text-3xl animate-pulse">
+                        Hi there
+</div>
+<h1 class="text-7xl md:text-[11rem] font-black tracking-tighter leading-[0.85] pb-8 block text-left mx-auto w-fit">
+                        <span class="text-3xl md:text-5xl block mb-4 text-on-surface-variant font-medium tracking-normal">I'M</span>
+                        Kiran<br/><span class="text-primary">Kannan.</span>
+</h1>
+<p class="text-3xl md:text-5xl font-medium text-on-surface-variant leading-tight">
+                        I am a <span class="text-primary font-black drop-shadow-[0_0_20px_rgba(67,224,207,0.4)]">Flutter Developer.</span>
+</p>
+<div class="flex flex-wrap justify-center gap-6 pt-10">
+<a class="tech-gradient px-10 py-5 rounded-xl font-black text-lg text-on-primary flex items-center gap-3 hover:shadow-[0_0_30px_rgba(67,224,207,0.4)] transition-all active:scale-95" href="#projects">
+                            View My Work
+                            <span class="material-symbols-outlined text-xl">arrow_forward</span>
+</a>
+<a class="ghost-border px-10 py-5 rounded-xl font-black text-lg text-on-surface hover:bg-white/5 transition-all active:scale-95" href="#contact">
+                            Contact Me
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Me Section -->
+<section class="min-h-[50vh] flex items-center justify-center py-32 bg-surface-container-low" id="about">
+<div class="max-w-6xl mx-auto px-6 text-center">
+<div class="space-y-10 text-4xl md:text-7xl font-black text-glow-animate leading-[1.05] tracking-tighter">
+<p>
+    I am a Flutter Developer with 1 year of hands-on experience building and maintaining mobile applications using <span class="text-primary">Flutter</span> and <span class="text-primary">Dart.</span>
+</p>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-12 bg-surface" id="skills">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-10 text-center md:text-left">
+<h2 class="text-4xl font-black tracking-tight">Skills.</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<div class="bg-primary/10 text-primary px-8 py-6 rounded-2xl text-xl font-black border border-primary/20 flex items-center justify-center text-center hover:bg-primary/20 transition-all cursor-default">Flutter</div>
+<div class="bg-surface-container-high text-on-surface px-8 py-6 rounded-2xl text-xl font-black border border-white/5 hover:border-primary/40 transition-all cursor-default flex items-center justify-center text-center">Dart</div>
+<div class="bg-surface-container-high text-on-surface px-8 py-6 rounded-2xl text-xl font-black border border-white/5 hover:border-primary/40 transition-all cursor-default flex items-center justify-center text-center">Clean Architecture</div>
+<div class="bg-surface-container-high text-on-surface px-8 py-6 rounded-2xl text-xl font-black border border-white/5 hover:border-primary/40 transition-all cursor-default flex items-center justify-center text-center">BLoC</div>
+<div class="bg-surface-container-high text-on-surface px-8 py-6 rounded-2xl text-xl font-black border border-white/5 hover:border-primary/40 transition-all cursor-default flex items-center justify-center text-center">Provider</div>
+<div class="bg-surface-container-high text-on-surface px-8 py-6 rounded-2xl text-xl font-black border border-white/5 hover:border-primary/40 transition-all cursor-default flex items-center justify-center text-center">Firebase</div>
+<div class="bg-surface-container-high text-on-surface px-8 py-6 rounded-2xl text-xl font-black border border-white/5 hover:border-primary/40 transition-all cursor-default flex items-center justify-center text-center">Hive</div>
+<div class="bg-surface-container-high text-on-surface px-8 py-6 rounded-2xl text-xl font-black border border-white/5 hover:border-primary/40 transition-all cursor-default flex items-center justify-center text-center">REST API</div>
+<div class="bg-surface-container-high text-on-surface px-8 py-6 rounded-2xl text-xl font-black border border-white/5 hover:border-primary/40 transition-all cursor-default flex items-center justify-center text-center">Git</div>
+</div>
+</div>
+</section>
+
+<!-- AI Tools Section -->
+<section class="py-12 bg-surface-container-low" id="ai-tools">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-10 text-center md:text-left">
+<h2 class="text-4xl font-black tracking-tight mb-2">Familiar AI Tools.</h2>
+<!-- <p class="text-on-surface-variant text-base">Accelerating development cycles with state-of-the-art AI partners.</p> -->
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl">
+<!-- Code Editors Card -->
+<div class="bg-surface p-6 md:p-8 rounded-3xl border border-white/5 hover:border-primary/30 transition-all group shadow-xl relative overflow-hidden">
+<h3 class="text-xl md:text-2xl font-black mb-8 text-primary">Code Editors</h3>
+<div class="flex flex-col gap-6">
+<div class="relative pl-5 border-l border-primary/10">
+<h4 class="text-lg font-bold mb-0.5 tracking-tight">Cursor</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">AI-powered code editor</p>
+</div>
+<div class="relative pl-5 border-l border-primary/10">
+<h4 class="text-lg font-bold mb-0.5 tracking-tight">Antigravity</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">AI-powered code editor</p>
+</div>
+</div>
+</div>
+
+<!-- UI Design Card -->
+<div class="bg-surface p-6 md:p-8 rounded-3xl border border-white/5 hover:border-primary/30 transition-all group shadow-xl relative overflow-hidden">
+<h3 class="text-xl md:text-2xl font-black mb-8 text-primary">UI Designs</h3>
+<div class="flex flex-col gap-6">
+<div class="relative pl-5 border-l border-primary/10">
+<h4 class="text-lg font-bold mb-0.5 tracking-tight">Google Stitch</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">AI-powered Prototyping Tool</p>
+</div>
+<div class="relative pl-5 border-l border-primary/10">
+<h4 class="text-lg font-bold mb-0.5 tracking-tight">Lovable</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Full-stack UI Generation</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="py-16 bg-surface-container-low" id="experience">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
+<div>
+<h2 class="text-xs font-bold tracking-[0.2em] uppercase text-primary mb-3">Professional History</h2>
+<h3 class="text-4xl font-bold tracking-tight">Work Experience.</h3>
+</div>
+</div>
+<div class="relative pl-8 md:pl-16 border-l-2 border-primary/20 space-y-10 ml-4 md:ml-8">
+<!-- Experience Item 1 -->
+<div class="relative group">
+<!-- Timeline Dot -->
+<div class="absolute -left-[41px] md:-left-[73px] top-10 w-4 h-4 bg-primary rounded-full shadow-[0_0_15px_rgba(67,224,207,0.5)] group-hover:scale-150 transition-transform duration-300 z-10"></div>
+<div class="absolute -left-[45px] md:-left-[77px] top-[36px] w-6 h-6 bg-primary/20 rounded-full animate-ping"></div>
+
+<div class="bg-surface-container-low p-6 md:p-10 rounded-3xl ghost-border hover:bg-surface-container transition-all hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:-translate-y-2 duration-500 relative overflow-hidden">
+<!-- Background decorative element -->
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-[80px] group-hover:bg-primary/10 transition-colors"></div>
+
+<div class="flex flex-col md:flex-row justify-between md:items-start gap-6 relative z-10">
+<div>
+
+<h4 class="text-2xl font-black group-hover:text-primary transition-colors mb-1">Kuvi Technomart LLP (Subsidiary of Kuvi Networks)</h4>
+<div class="flex items-center gap-2 text-on-surface-variant font-medium text-sm">
+<span class="material-symbols-outlined text-xs">work</span>
+<span>Flutter Developer</span>
+</div>
+</div>
+<div class="text-primary font-mono text-xs tracking-widest bg-primary/5 px-3 py-1.5 rounded-full border border-primary/10">Dec 2025 — Mar 2026</div>
+</div>
+<div class="mt-6 text-on-surface-variant leading-relaxed max-w-3xl text-base relative z-10">
+                            Worked on <span class="text-primary font-bold">Belivmart</span>, a production-level food delivery mobile application developed using Flutter and Dart. The app provides a seamless user experience for browsing products, managing carts, and placing orders. Implemented state management using Provider to ensure efficient data handling and smooth UI updates, while contributing to the development of core features and overall app performance.
+                        </div>
+<div class="mt-8 flex flex-wrap items-center gap-6 relative z-10">
+<button class="flex items-center gap-3 text-primary font-bold hover:gap-5 transition-all text-base group/btn" onclick="openExperienceModal('belivmart')">
+<span>Responsibilities</span>
+<span class="material-symbols-outlined group-hover/btn:scale-125 transition-transform text-sm">arrow_right_alt</span>
+</button>
+
+<div class="flex flex-wrap gap-3">
+<a href="https://play.google.com/store/apps/details?id=com.belivmart.app" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold border border-primary/20 hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-sm">shopping_bag</span>
+Play Store
+</a>
+<a href="https://play.google.com/store/apps/details?id=com.belivmart.delivery" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold border border-white/5 hover:bg-primary/20 hover:text-primary transition-all">
+<span class="material-symbols-outlined text-sm">delivery_dining</span>
+Agent App
+</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Experience Item 2 -->
+<div class="relative group">
+<!-- Timeline Dot -->
+<div class="absolute -left-[41px] md:-left-[73px] top-10 w-4 h-4 bg-primary rounded-full shadow-[0_0_15px_rgba(67,224,207,0.5)] group-hover:scale-150 transition-transform duration-300 z-10"></div>
+
+<div class="bg-surface-container-low p-6 md:p-10 rounded-3xl ghost-border hover:bg-surface-container transition-all hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:-translate-y-2 duration-500 relative overflow-hidden">
+<!-- Background decorative element -->
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-[80px] group-hover:bg-primary/10 transition-colors"></div>
+
+<div class="flex flex-col md:flex-row justify-between md:items-start gap-6 relative z-10">
+<div>
+
+<h4 class="text-2xl font-black group-hover:text-primary transition-colors mb-1">Six Dreams</h4>
+<div class="flex items-center gap-2 text-on-surface-variant font-medium text-sm">
+<span class="material-symbols-outlined text-xs">work</span>
+<span>Flutter Developer</span>
+</div>
+</div>
+<div class="text-primary font-mono text-xs tracking-widest bg-primary/5 px-3 py-1.5 rounded-full border border-primary/10">Dec 2024 — Aug 2025</div>
+</div>
+<div class="mt-6 text-on-surface-variant leading-relaxed max-w-3xl text-base relative z-10">
+                            SixDreams is a cross platform fantasy sports app for Android and IOS built with Flutter, Dart, Bloc Statemanagment, Clean Architecture and SOLID. Integrated Mason CodeGeneration, Dio, Payment Integration (Razorpay).
+                        </div>
+<div class="mt-8 relative z-10">
+<button class="flex items-center gap-3 text-primary font-bold hover:gap-5 transition-all text-base group/btn" onclick="openExperienceModal('sixdreams')">
+<span>Responsibilities</span>
+<span class="material-symbols-outlined group-hover/btn:scale-125 transition-transform text-sm">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section (Asymmetric) -->
+<section class="py-24 bg-surface" id="projects">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16">
+<!-- <h2 class="text-xs font-bold tracking-[0.2em] uppercase text-primary mb-4">Featured Work</h2> -->
+<h3 class="text-5xl font-bold tracking-tight">What I’ve Built.</h3>
+</div>
+<div class="relative group">
+<div class="grid md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-7 overflow-hidden rounded-xl bg-surface-container-high ghost-border shadow-2xl">
+<div class="slider-container" id="hungryfill-slider">
+<!-- Slides -->
+<div class="slide active" style="background-image: url('assets/projects/hungryfill/Screenshot_1776706194-portrait.png')"></div>
+<div class="slide" style="background-image: url('assets/projects/hungryfill/Screenshot_1776706231-portrait.png')"></div>
+<div class="slide" style="background-image: url('assets/projects/hungryfill/Screenshot_1776706243-portrait.png')"></div>
+<div class="slide" style="background-image: url('assets/projects/hungryfill/Screenshot_1776706253-left.png')"></div>
+<div class="slide" style="background-image: url('assets/projects/hungryfill/Screenshot_1776706260-left.png')"></div>
+<div class="slide" style="background-image: url('assets/projects/hungryfill/Screenshot_1776706580-portrait.png')"></div>
+<div class="slide" style="background-image: url('assets/projects/hungryfill/Screenshot_1776706595-left.png')"></div>
+<div class="slide" style="background-image: url('assets/projects/hungryfill/Screenshot_1776707019-portrait.png')"></div>
+</div>
+</div>
+<div class="md:col-span-5 md:pl-8 space-y-6">
+<div class="flex flex-wrap gap-3">
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase border border-primary/10">Featured Project</span>
+</div>
+<h4 class="text-4xl font-black tracking-tight group-hover:text-primary transition-colors">Hungry Fill</h4>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                            HungryFill is a food delivery application that provides users with a convenient platform to order food and manage their orders through a cart facility...
+                        </p>
+<div class="flex flex-wrap gap-4">
+<a href="https://github.com/kirankannan8137/hungry-fill" target="_blank" class="flex items-center gap-2 text-on-surface-variant hover:text-primary font-bold text-sm transition-colors group/link">
+<span class="material-symbols-outlined text-lg group-hover/link:rotate-12 transition-transform">code</span>
+GitHub
+</a>
+<a href="https://www.amazon.com/dp/B0DH8M6G65/ref=apps_sf_sta" target="_blank" class="flex items-center gap-2 text-on-surface-variant hover:text-primary font-bold text-sm transition-colors group/link">
+<span class="material-symbols-outlined text-lg group-hover/link:rotate-12 transition-transform">shopping_bag</span>
+Appstore
+</a>
+</div>
+<div class="pt-4">
+<button onclick="openProjectModal('hungryfill')" class="tech-gradient px-8 py-3.5 rounded-xl font-black text-sm tracking-widest uppercase text-on-primary hover:shadow-[0_0_25px_rgba(67,224,207,0.4)] transition-all active:scale-95 group/btn">
+Know More
+<span class="material-symbols-outlined align-middle ml-2 group-hover/btn:translate-x-1 transition-transform text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 text-center">
+<a class="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-surface-container-high border border-white/5 hover:border-primary/50 hover:bg-surface-container transition-all group shadow-xl" href="https://github.com/kirankannan8137?tab=repositories" target="_blank">
+<span class="text-xl font-bold tracking-tight">Explore more on <span class="text-primary group-hover:drop-shadow-[0_0_10px_rgba(67,224,207,0.3)]">GitHub</span></span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface-container-low" id="contact">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-10 mb-24 border-b border-white/5 pb-12">
+<div class="max-w-2xl text-center md:text-left">
+<h3 class="text-4xl md:text-5xl font-black tracking-tighter leading-tight">
+Interested in Working Together? <br/><span class="text-primary">Let’s Connect!</span>
+</h3>
+</div>
+<button onclick="openContactModal()" class="tech-gradient px-8 py-3.5 rounded-full font-black text-sm tracking-widest uppercase text-on-primary hover:shadow-[0_0_25px_rgba(67,224,207,0.4)] transition-all active:scale-95 whitespace-nowrap group border border-white/20">
+Contact Me
+<span class="material-symbols-outlined align-middle ml-2 group-hover:translate-x-1 transition-transform text-base">arrow_forward</span>
+</button>
+</div>
+
+<div class="flex flex-col items-center gap-12">
+<div class="flex gap-12">
+<a href="https://www.linkedin.com/in/kiran-kannan8/" target="_blank" class="group flex flex-col items-center gap-4">
+<div class="w-14 h-14 flex items-center justify-center rounded-xl bg-surface-container-high ghost-border group-hover:border-primary transition-all duration-500 scale-100 group-hover:scale-110">
+<svg class="w-6 h-6 fill-on-surface-variant group-hover:fill-primary transition-colors" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+</div>
+<span class="text-[10px] font-black tracking-[0.2em] uppercase text-on-surface-variant group-hover:text-primary transition-colors">LinkedIn</span>
+</a>
+<a href="https://github.com/kirankannan8137" target="_blank" class="group flex flex-col items-center gap-4">
+<div class="w-14 h-14 flex items-center justify-center rounded-xl bg-surface-container-high ghost-border group-hover:border-primary transition-all duration-500 scale-100 group-hover:scale-110">
+<svg class="w-6 h-6 fill-on-surface-variant group-hover:fill-primary transition-colors" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.61-4.041-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+</div>
+<span class="text-[10px] font-black tracking-[0.2em] uppercase text-on-surface-variant group-hover:text-primary transition-colors">GitHub</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Contact Modal -->
+<div class="fixed inset-0 z-[100] hidden flex items-center justify-center px-6" id="contactModal">
+<div class="absolute inset-0 bg-[#0b1326]/80 backdrop-blur-md" onclick="closeContactModal()"></div>
+<div class="relative bg-surface-container-high w-full max-w-2xl rounded-3xl ghost-border p-8 md:p-12 shadow-2xl animate-scale-in">
+<button class="absolute top-6 right-6 text-on-surface-variant hover:text-primary transition-colors" onclick="closeContactModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="mb-10 text-center md:text-left">
+<h3 class="text-4xl font-black text-primary mb-2">Let's Connect</h3>
+<p class="text-on-surface-variant font-medium">I'll get back to you within 24 hours.</p>
+</div>
+<form class="space-y-8 relative z-10" id="contactFormElement">
+<div class="space-y-3">
+<label class="text-xs font-bold tracking-[0.2em] uppercase text-primary">Name</label>
+<input required class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary focus:invalid:border-red-500/50 transition-all text-xl text-on-surface px-0 py-4 placeholder:text-on-surface-variant/30" placeholder="Your Name" type="text" name="name"/>
+</div>
+<div class="space-y-3">
+<label class="text-xs font-bold tracking-[0.2em] uppercase text-primary">Email Address</label>
+<input required class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary focus:invalid:border-red-500/50 transition-all text-xl text-on-surface px-0 py-4 placeholder:text-on-surface-variant/30" placeholder="hello@example.com" type="email" name="email"/>
+</div>
+<div class="space-y-3">
+<label class="text-xs font-bold tracking-[0.2em] uppercase text-primary">Message</label>
+<textarea required class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary focus:invalid:border-red-500/50 transition-all text-xl text-on-surface px-0 py-4 resize-none placeholder:text-on-surface-variant/30" placeholder="Tell me about your vision..." rows="3" name="message"></textarea>
+</div>
+<button class="tech-gradient w-full py-5 rounded-xl font-black text-lg text-on-primary hover:shadow-[0_0_30px_rgba(67,224,207,0.3)] transition-all active:scale-95" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+
+<!-- Modal for Experience Details -->
+<div class="fixed inset-0 z-[100] hidden flex items-center justify-center px-6" id="expModal">
+<div class="absolute inset-0 bg-[#0b1326]/80 backdrop-blur-md" onclick="closeExperienceModal()"></div>
+<div class="relative bg-surface-container-high w-full max-w-2xl rounded-2xl ghost-border p-8 md:p-12 shadow-2xl animate-scale-in">
+<button class="absolute top-6 right-6 text-on-surface-variant hover:text-primary transition-colors" onclick="closeExperienceModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div id="modalContent">
+<!-- Content will be injected here -->
+</div>
+</div>
+</div>
+</body></html>
